@@ -1,7 +1,7 @@
 %define name ikvm
-%define version 0.32.0.0
-%define release %mkrel 2
-%define classpath 0.93
+%define version 0.34.0.2
+%define release %mkrel 1
+%define classpath 0.95
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
 %else
