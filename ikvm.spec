@@ -1,5 +1,5 @@
 %define name ikvm
-%define version 0.34.0.2
+%define version 0.34.0.3
 %define release %mkrel 1
 %define classpath 0.95
 %if %mdkversion >= 200600
