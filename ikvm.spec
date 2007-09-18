@@ -23,7 +23,6 @@ Group: Development/Java
 Url: http://www.ikvm.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
-ExcludeArch: x86_64
 BuildRequires: nant
 BuildRequires: ecj
 Requires: mono
