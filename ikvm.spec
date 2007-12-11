@@ -1,6 +1,6 @@
 %define name ikvm
-%define version 0.34.0.4
-%define release %mkrel 2
+%define version 0.36.0.5
+%define release %mkrel 1
 %define classpath 0.95
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
@@ -12,27 +12,28 @@ Summary: Java implementation for Mono
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://prdownloads.sourceforge.net/ikvm/%{name}-%{version}.tar.bz2
-Source1: ftp://ftp.gnu.org/pub/gnu/classpath/classpath-%classpath.tar.bz2
+Source0: http://prdownloads.sourceforge.net/ikvm/%{name}-%{version}.zip
+Source1: http://www.frijters.net/classpath-%classpath-stripped.zip
 Source2: ikvm
 Source3: ikvmc
 Source4: ikvmstub
 Source5: ikvm.pc
+Source6: http://www.frijters.net/openjdk-b13-stripped.zip
 License: GPL-like
 Group: Development/Java
 Url: http://www.ikvm.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 BuildRequires: nant
-BuildRequires: ecj
+BuildRequires: java-1.7.0-icedtea-devel
 Requires: mono
 
 %description
 IKVM.NET is a JVM for Mono and the Microsoft .NET framework.
 
 %prep
-%setup -q -a 1
-perl -pi -e "s^\.\./\.\.^..^" classpath/allsources.lst classpath/classpath.build
+%setup -q -a 1 -a 6
+perl -pi -e "s^\.\./\.\.^..^" classpath/allsources.lst classpath/classpath.build openjdk/allsources.lst openjdk/openjdk.build
 
 %build
 export PATH=`pwd`/bin:$PATH
