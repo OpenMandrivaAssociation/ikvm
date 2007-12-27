@@ -26,8 +26,6 @@ BuildArch: noarch
 BuildRequires: nant
 BuildRequires: java-1.7.0-icedtea-devel
 Requires: mono
-#gw workaround for bug #36088
-Excludearch: x86_64
 
 %description
 IKVM.NET is a JVM for Mono and the Microsoft .NET framework.
