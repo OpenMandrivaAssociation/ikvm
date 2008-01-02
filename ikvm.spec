@@ -22,6 +22,7 @@ Source6: http://www.frijters.net/openjdk-b13-stripped.zip
 License: GPL-like
 Group: Development/Java
 Url: http://www.ikvm.net/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 BuildRequires: nant
 BuildRequires: java-1.7.0-icedtea-devel
