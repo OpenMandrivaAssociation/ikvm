@@ -46,7 +46,7 @@ install -D %SOURCE2 -m 755 %buildroot%_bindir/ikvm
 install -D %SOURCE3 -m 755 %buildroot%_bindir/ikvmc
 install -D %SOURCE4 -m 755 %buildroot%_bindir/ikvmstub
 install -D %SOURCE5 -m 644 %buildroot%pkgconfigdir/ikvm.pc
-perl -pi -e "s^0.14^%version^" %pkgconfigdir/ikvm.pc
+perl -pi -e "s^0.14^%version^" %buildroot%pkgconfigdir/ikvm.pc
 mkdir -p %buildroot%_prefix/lib/%name
 cp bin/*.exe bin/IKVM*.dll %buildroot%_prefix/lib/%name
 
