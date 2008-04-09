@@ -1,5 +1,5 @@
 %define name ikvm
-%define version 0.36.0.5
+%define version 0.36.0.11
 %define release %mkrel 1
 %define classpath 0.95
 %if %mdkversion >= 200600
@@ -19,6 +19,7 @@ Source3: ikvmc
 Source4: ikvmstub
 Source5: ikvm.pc
 Source6: http://www.frijters.net/openjdk-b13-stripped.zip
+Patch: classpath-0.95-awt-image-raster-fix.patch
 License: GPL-like
 Group: Development/Java
 Url: http://www.ikvm.net/
@@ -33,6 +34,7 @@ IKVM.NET is a JVM for Mono and the Microsoft .NET framework.
 
 %prep
 %setup -q -a 1 -a 6
+%patch -p0
 perl -pi -e "s^\.\./\.\.^..^" classpath/allsources.lst classpath/classpath.build openjdk/allsources.lst openjdk/openjdk.build
 
 %build
