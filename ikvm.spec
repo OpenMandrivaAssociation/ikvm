@@ -1,7 +1,8 @@
 %define name ikvm
-%define version 0.36.0.11
-%define release %mkrel 2
+%define version 0.38.0.2
+%define release %mkrel 1
 %define classpath 0.95
+%define openjdk b12
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
 %else
@@ -18,7 +19,7 @@ Source2: ikvm
 Source3: ikvmc
 Source4: ikvmstub
 Source5: ikvm.pc
-Source6: http://www.frijters.net/openjdk-b13-stripped.zip
+Source6: http://www.frijters.net/openjdk6-%openjdk-stripped.zip
 Patch: classpath-0.95-awt-image-raster-fix.patch
 License: GPL-like
 Group: Development/Java
