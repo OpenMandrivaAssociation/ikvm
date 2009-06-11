@@ -1,5 +1,5 @@
 %define name ikvm
-%define version 0.38.0.2
+%define version 0.40.0.1
 %define release %mkrel 1
 %define classpath 0.95
 %define openjdk b12
@@ -36,7 +36,8 @@ IKVM.NET is a JVM for Mono and the Microsoft .NET framework.
 %prep
 %setup -q -a 1 -a 6
 %patch -p0
-perl -pi -e "s^\.\./\.\.^..^" classpath/allsources.lst classpath/classpath.build openjdk/allsources.lst openjdk/openjdk.build
+#gw fix paths for our source directory layout
+perl -pi -e "s^\.\./\.\.^..^" classpath/allsources.lst classpath/classpath.build openjdk/allsources.lst openjdk/openjdk.build openjdk/response.txt
 
 %build
 export PATH=`pwd`/bin:$PATH
