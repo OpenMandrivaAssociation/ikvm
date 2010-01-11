@@ -1,8 +1,8 @@
 %define name ikvm
-%define version 0.40.0.1
+%define version 0.42.0.3
 %define release %mkrel 1
 %define classpath 0.95
-%define openjdk b12
+%define openjdk b16
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
 %else
