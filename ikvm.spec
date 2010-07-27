@@ -1,5 +1,5 @@
 %define name ikvm
-%define version 0.42.0.6
+%define version 0.42.0.7
 %define release %mkrel 1
 %define classpath 0.95
 %define openjdk b16
@@ -13,7 +13,7 @@ Summary: Java implementation for Mono
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://prdownloads.sourceforge.net/ikvm/%{name}-%{version}.zip
+Source0: http://www.frijters.net/%{name}-%{version}.zip
 Source1: http://www.frijters.net/classpath-%classpath-stripped.zip
 Source2: ikvm
 Source3: ikvmc
