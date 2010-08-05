@@ -1,8 +1,8 @@
 %define name ikvm
-%define version 0.42.0.7
-%define release %mkrel 1
+%define version 0.44.0.3
+%define release %mkrel 0
 %define classpath 0.95
-%define openjdk b16
+%define openjdk b18
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
 %else
@@ -13,7 +13,7 @@ Summary: Java implementation for Mono
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://www.frijters.net/%{name}-%{version}.zip
+Source0: http://www.frijters.net/%{name}src-%{version}.zip
 Source1: http://www.frijters.net/classpath-%classpath-stripped.zip
 Source2: ikvm
 Source3: ikvmc
@@ -38,6 +38,8 @@ IKVM.NET is a JVM for Mono and the Microsoft .NET framework.
 %patch -p0
 #gw fix paths for our source directory layout
 perl -pi -e "s^\.\./\.\.^..^" classpath/allsources.lst classpath/classpath.build openjdk/allsources.lst openjdk/openjdk.build openjdk/response.txt
+mkdir bin
+cp %_prefix/lib/mono/2.0/ICSharpCode.SharpZipLib.dll bin/
 
 %build
 export PATH=`pwd`/bin:$PATH
@@ -60,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc LICENSE THANKYOU website/build/site
+%doc LICENSE TH* HOWTO
 %_bindir/*
 %_prefix/lib/%name
 %pkgconfigdir/*.pc
