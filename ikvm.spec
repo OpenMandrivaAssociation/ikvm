@@ -28,6 +28,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 BuildRequires: nant
 BuildRequires: java-1.7.0-icedtea-devel
+BuildRequires: glib2-devel
 Requires: mono
 
 %description
