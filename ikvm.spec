@@ -1,5 +1,5 @@
 %define name ikvm
-%define version 0.44.0.5
+%define version 0.44.0.6
 %define release %mkrel 1
 %define classpath 0.95
 %define openjdk b18
