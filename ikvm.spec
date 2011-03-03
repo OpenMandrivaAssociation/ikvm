@@ -1,7 +1,6 @@
 %define name ikvm
 %define version 0.44.0.6
 %define release %mkrel 1
-%define classpath 0.95
 %define openjdk b18
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
@@ -14,13 +13,11 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://www.frijters.net/%{name}src-%{version}.zip
-Source1: http://www.frijters.net/classpath-%classpath-stripped.zip
 Source2: ikvm
 Source3: ikvmc
 Source4: ikvmstub
 Source5: ikvm.pc
 Source6: http://www.frijters.net/openjdk6-%openjdk-stripped.zip
-Patch: classpath-0.95-awt-image-raster-fix.patch
 License: GPL-like
 Group: Development/Java
 Url: http://www.ikvm.net/
@@ -35,8 +32,7 @@ Requires: mono
 IKVM.NET is a JVM for Mono and the Microsoft .NET framework.
 
 %prep
-%setup -q -a 1 -a 6
-%patch -p0
+%setup -q -a 6
 #gw fix paths for our source directory layout
 perl -pi -e "s^\.\./\.\.^..^" classpath/allsources.lst classpath/classpath.build openjdk/allsources.lst openjdk/openjdk.build openjdk/response.txt
 mkdir bin
