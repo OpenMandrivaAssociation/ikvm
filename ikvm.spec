@@ -1,7 +1,7 @@
 %define name ikvm
-%define version 0.44.0.6
+%define version 0.46.0.1
 %define release %mkrel 1
-%define openjdk b18
+%define openjdk b22
 %if %mdkversion >= 200600
 %define pkgconfigdir %_datadir/pkgconfig
 %else
