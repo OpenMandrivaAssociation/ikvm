@@ -1,7 +1,3 @@
 sources:
-  "ikvm:"	a0118d55e544c6336072c4eab112c6f50ea4a308
-  "ikvmc:"	ef974b47306ce40f5b52a50d0c5747aed72f0b1a
-  "ikvm.pc:"	0a6a7773c69924b3576d7c154e483370ff3ec523
-  "ikvmsrc-0.46.0.2.zip:"	05ced1e67202291512adc4d95360d5d4b1757f9d
-  "ikvmstub:"	cee43902e95259c5d7516a3c524865f9ce17f627
-  "openjdk6-b22-stripped.zip:"	571e4dc6cfc34b3371aa3ccf1f5906d3965631a2
+  "ikvmsrc-0.46.0.2.zip": 05ced1e67202291512adc4d95360d5d4b1757f9d
+  "openjdk6-b22-stripped.zip": 571e4dc6cfc34b3371aa3ccf1f5906d3965631a2
