@@ -20,7 +20,7 @@ Source5: ikvm.pc
 Source6: http://www.frijters.net/openjdk6-%openjdk-stripped.zip
 License: GPL-like
 Group: Development/Java
-Url: http://www.ikvm.net/
+Url: https://www.ikvm.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 BuildRequires: nant
